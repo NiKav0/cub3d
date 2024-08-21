@@ -1,1 +1,1 @@
-# cub3d
+Cub3d project 42 fr
