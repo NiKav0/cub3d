@@ -36,10 +36,9 @@ char	**get_infos(int fd, t_map *infos)
 			continue;
 		line = ft_strtrim(line, " \t");
 		before_map = ft_strjoin(before_map, line);
-		// printf("ZEBBI\n");
 		free(line);
 		line = get_next_line(fd);
-		if (only_ones(line) == 0)
+		if (only_ones(line) == 1)
 		{
 			infos->map_line = ft_strcpy(line);
 			free(line);
@@ -57,7 +56,6 @@ int check_infos(t_map *infos, char **first_half)
 
 	i = 0;
 	j = 0;
-
 	while (first_half[i])
 	{
 		j += extract_infos(first_half[i], infos);

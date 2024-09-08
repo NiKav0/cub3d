@@ -20,6 +20,7 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 		return (write(2, "Error: Make sure you entered 2 arguments.\n", 42), 1);
+	ft_bzero(&mapping, sizeof(t_map));
 	if (!check_extension(av[1]))
 		return (write(2, "Error: Invalid file extension.\n", 30), 1);
 	fd = open(av[1], O_RDONLY);

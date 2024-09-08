@@ -29,9 +29,11 @@ int only_ones(char *str)
 	int i;
 
 	i = 0;
+	if (str == NULL)
+		return (-1);
     while (str[i])
 	{
-        if (str[i] != ' ' && str[i] != '1')
+        if (str[i] != ' ' && str[i] != '1' && str[i] != '\n')
             return 0;
         i++;
     }

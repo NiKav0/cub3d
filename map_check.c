@@ -68,24 +68,24 @@ int check_spots (char **map, int x, int y)
 			return (0);
 }
 
-int	check_map(t_smyt_struct *struct)
+int	check_map(t_map *map)
 {
 	int	x;
 	int	y;
 	int	rowlen;
 
-	if (check_row(struct->map, 0)
-		|| check_row(struct->map, struct->map_height - 1)
-		|| check_firstlast(struct->map, struct->map_height))
+	if (check_row(map->map, 0)
+		|| check_row(map->map, map->x_len - 1)
+		|| check_firstlast(map->map, map->x_len))
 		return (1);
 	y = 1;
-	while (y < struct->map_height - 1)
+	while (y < map->x_len - 1)
 	{
 		x = 1;
-		rowlen = ft_strlen(struct->map[y]);
+		rowlen = ft_strlen(map->map[y]);
 		while (x < rowlen - 1)
 		{
-			if (check_spots(struct->map, x, y))
+			if (check_spots(map->map, x, y))
 				return (1);
 			x++;
 		}
