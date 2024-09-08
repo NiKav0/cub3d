@@ -45,14 +45,14 @@ ssize_t	position(char *s, int c)
 	return (-1);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoing(char *s1, char *s2)
 {
 	char	*r;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	r = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, 1);
+	r = ft_calloc(ft_strleng(s1) + ft_strleng(s2) + 1, 1);
 	if (r == NULL)
 		return (NULL);
 	while (s1[i])
@@ -71,7 +71,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (r);
 }
 
-size_t	ft_strlen(char *s)
+size_t	ft_strleng(char *s)
 {
 	size_t	i;
 
@@ -81,7 +81,7 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_substr(char *s, unsigned int start, size_t len)
+char	*ft_substrg(char *s, unsigned int start, size_t len)
 {
 	size_t			b;
 	char			*subs;
@@ -91,10 +91,10 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	{
 		return (0);
 	}
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
+	if (len > ft_strleng(s))
+		len = ft_strleng(s);
 	b = 0;
-	test = ft_strlen(s);
+	test = ft_strleng(s);
 	subs = malloc(len * sizeof(char) + 1);
 	if (!subs)
 		return (0);

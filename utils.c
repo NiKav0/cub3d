@@ -24,3 +24,30 @@ int	not_valid(char c)
 		return (0);
 }
 
+int only_ones(char *str)
+{
+	int i;
+
+	i = 0;
+    while (str[i])
+	{
+        if (str[i] != ' ' && str[i] != '1')
+            return 0;
+        i++;
+    }
+    return 1;
+}
+
+int	is_empty_line(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != ' ' || str[i] != '\t')
+			return (0);
+		i++;
+	}
+	return (1);
+}

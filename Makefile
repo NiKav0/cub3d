@@ -1,6 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = main.c map_parsing.c ./getnextline/get_next_line.c ./getnextline/get_next_line_utils.c
+SRCS = main.c parse_textures.c parse_infos.c parse_rgb.c before_map.c \
+	   utils.c utils2.c ./getnextline/get_next_line.c ./getnextline/get_next_line_utils.c 
 LIBFT = ./libft/libft.a
 OBJS = $(SRCS:.c=.o)
 EXEC = cub3D

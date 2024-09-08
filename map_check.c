@@ -10,7 +10,7 @@ int	mapping (char *file)
 	check = 0;
 	while (file[i] && i > 0)
 	{
-		if (!(is_there("10NEWS \n", file[i])))
+		if (!(is_there("10NEWSFC \n", file[i])))
 			check = 1;
 		i--;
 		if (file[i] == '\n' && file[i - 1] == '\n')
@@ -28,7 +28,7 @@ int check_row (char **map, int y_pos)
 	x_len = ft_strlen(map[y_pos]);
 	while (x < x_len)
 	{
-		if (!(is_there("0NEWS", map[y_pos][x])))
+		if (!(is_there("0NEWSFC", map[y_pos][x])))
 			return (1);
 		x++;
 	}
@@ -44,16 +44,17 @@ int check_begin_end (char ** map, int irtifa3)
 	while (y < irtifa3)
 	{
 		x_len = ft_strlen(map[y]);
-		if (is_there("0NEWS", map[y][0]) 
-			|| is_there("0NEWS", map[y][x_len - 1]))
+		if (is_there("0NEWSFC", map[y][0]) 
+			|| is_there("0NEWSFC", map[y][x_len - 1]))
 			return (1);
 		y++;
 	}
+	return (0);
 }
 
 int check_spots (char **map, int x, int y)
 {
-	if (is_there("0NEWS", map[y][x]) && 
+	if (is_there("0NEWSFC", map[y][x]) && 
 			(not_valid(map[y - 1][x]) || 
 			not_valid(map[y + 1][x]) ||
 			not_valid(map[y][x - 1]) ||

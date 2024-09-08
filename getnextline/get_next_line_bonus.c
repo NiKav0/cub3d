@@ -22,18 +22,18 @@ char	*get_next_line(int fd)
 	how = 1;
 	if (lba9i[fd])
 	{
-		tarro = ft_strjoin(tarro, lba9i[fd]);
+		tarro = ft_strjoing(tarro, lba9i[fd]);
 		free(lba9i[fd]);
 		lba9i[fd] = NULL;
 	}
 	tarro = reder(fd, tarro, &how);
 	if (tarro && (position(tarro, '\n') != -1))
 	{
-		lba9i[fd] = ft_substr(tarro, (position(tarro, '\n') + 1),
+		lba9i[fd] = ft_substrg(tarro, (position(tarro, '\n') + 1),
 				(position(tarro, '\0')));
 		tarro = li_3jbek(tarro);
 	}
-	else if (how == 0 && ft_strlen(tarro) == 0)
+	else if (how == 0 && ft_strleng(tarro) == 0)
 	{
 		free(tarro);
 		return (NULL);
@@ -47,7 +47,7 @@ char	*li_3jbek(char *str)
 
 	if (!str)
 		return (NULL);
-	pointer = ft_substr(str, 0, (position(str, '\n') + 1));
+	pointer = ft_substrg(str, 0, (position(str, '\n') + 1));
 	free(str);
 	return (pointer);
 }
@@ -67,7 +67,7 @@ char	*reder(int fd, char *tarro, int *how)
 			free(tarro);
 			return (NULL);
 		}
-		tarro = ft_strjoin(tarro, buff);
+		tarro = ft_strjoing(tarro, buff);
 	}
 	free(buff);
 	return (tarro);
