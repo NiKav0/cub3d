@@ -33,7 +33,7 @@ int only_ones(char *str)
 		return (-1);
     while (str[i])
 	{
-        if (str[i] != ' ' && str[i] != '1' && str[i] != '\n')
+        if (str[i] != ' ' && str[i] != '1')
             return 0;
         i++;
     }

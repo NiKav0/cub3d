@@ -59,6 +59,7 @@ int check_infos(t_map *infos, char **first_half)
 	while (first_half[i])
 	{
 		j += extract_infos(first_half[i], infos);
+		printf("1st half: %s  j: %d\n", first_half[i], j);
 		i++;
 	}
 	if (j != 6)

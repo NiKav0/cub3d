@@ -25,7 +25,7 @@ int	main(int ac, char **av)
 		return (write(2, "Error: Invalid file extension.\n", 30), 1);
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
-		return (write(2, "File not opened/found\n", 20), 1);
+		return (write(2, "File not opened/found.\n", 24), 1);
 	if (parse_infos(fd, &mapping) == 1)
 		return (free_data(&mapping), 1);
 	// if (parse_map(av[1]) != 0)
