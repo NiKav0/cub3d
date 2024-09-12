@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -ggdb
-SRCS = main.c parse_textures.c parse_infos.c parse_rgb.c before_map.c \
+SRCS = main.c parse_textures.c parse_infos.c parse_rgb.c before_map.c after_map.c \
 	   utils.c utils2.c ./getnextline/get_next_line.c ./getnextline/get_next_line_utils.c 
 LIBFT = ./libft/libft.a
 OBJS = $(SRCS:.c=.o)
@@ -21,3 +21,5 @@ fclean: clean
 	rm -f $(EXEC)
 
 re: fclean all
+
+.SILENT:

@@ -38,6 +38,7 @@ int 	only_ones(char *str);
 char	*ft_strcpy(char *src);
 void	free_arr(char **arr);
 void	free_data(t_map *data);
+char	**get_map(int fd, t_map *infos);
 // int		not_valid(char c);
 // int		is_there(char *str, char c);
 

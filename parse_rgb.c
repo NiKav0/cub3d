@@ -45,16 +45,22 @@ int	second_check(char **tmp)
 
 int	check_rgb(t_map *map)
 {
-	char **tmp;
+	char	**tmp;
+	char	*new;
+
 	if (!map->f || !map->c)
 		return (0);
-	tmp = ft_split(map->f, ',');
-	if (first_check(tmp, map->f) == 0 || second_check(tmp) == 0)
+	new = ft_strtrim(map->f, "\n");
+	tmp = ft_split(new, ',');
+	if (first_check(tmp, new) == 0 || second_check(tmp) == 0)
 		return (0);
 	free_arr(tmp);
-	tmp = ft_split(map->c, ',');
-	if (first_check(tmp, map->c) == 0 || second_check(tmp) == 0)
+	free(new);
+	new = ft_strtrim(map->c, "\n");
+	tmp = ft_split(new, ',');
+	if (first_check(tmp, new) == 0 || second_check(tmp) == 0)
 		return (0);
 	free_arr(tmp);
+	free(new);
 	return (1);
 }
