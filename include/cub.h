@@ -6,7 +6,7 @@
 /*   By: calmouht <calmouht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:22:17 by aboudoun          #+#    #+#             */
-/*   Updated: 2024/09/29 23:19:41 by calmouht         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:00:36 by calmouht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@
 # define RIGHT 124
 # define EXIT 69
 ////////////////////
-# define EMPTY '0'
-# define WALL '1'
+# define EMPTY 
+# define WALL 
 # define NAME "cub3d"
 # define WIN_WIDTH 1000
 # define WIN_HEIGHT 800

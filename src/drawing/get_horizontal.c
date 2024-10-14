@@ -6,7 +6,7 @@
 /*   By: calmouht <calmouht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 08:11:07 by calmouht          #+#    #+#             */
-/*   Updated: 2024/10/12 06:20:12 by calmouht         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:00:54 by calmouht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	check_map(t_data *data, t_distance *dist)
 		mx = (int)(dist->rx) / data->box_size;
 		my = (int)(dist->ry) / data->box_size;
 		if (mx >= 0 && mx < data->game->map_width && my < \
-data->game->map_height && my >= 0 && data->game->map[my][mx] == WALL)
+data->game->map_height && my >= 0 && data->game->map[my][mx] == '1')
 			dist->dof = data->game->map_height;
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: calmouht <calmouht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 08:10:52 by calmouht          #+#    #+#             */
-/*   Updated: 2024/10/12 06:19:48 by calmouht         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:00:15 by calmouht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ static void	draw_pixels(t_data *data, int j, int mx, int my)
 		if (my < 0 || mx < 0 || my / x > data->game->map_height - 1 || mx / \
 		x > data->game->map_width - 1 || data->game->map[my / x][mx / x] == ' ')
 			my_mlx_pixel_put(data->img, i, j, 0x7058FF);
-		else if (data->game->map[my / x][mx / x] == WALL)
+		else if (data->game->map[my / x][mx / x] == '1')
 			my_mlx_pixel_put(data->img, i, j, 0x9958FF);
-		else if (data->game->map[my / x][mx / x] == EMPTY || \
+		else if (data->game->map[my / x][mx / x] == '0' || \
 		ft_strchr("NSWE", data->game->map[my / x][mx / x]))
 			my_mlx_pixel_put(data->img, i, j, 0xD2DAFF);
 		i++;
